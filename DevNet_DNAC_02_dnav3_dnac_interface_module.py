@@ -8,6 +8,7 @@ DNAC_USER = "devnetuser"
 DNAC_PASSWORD = "Cisco123!"
 DNAC = "sandboxdnac.cisco.com"
 DNAC_PORT = "443"
+passed_IP = sys.argv
 
 
 def get_auth_token(controller_ip=DNAC, username=DNAC_USER, password=DNAC_PASSWORD):
@@ -62,7 +63,9 @@ def print_info(modules):
                                                            partNumber=module['partNumber'],
                                                            moduleType=module['isFieldReplaceable']))
 
-
-if __name__ == "__main__":
-    print_info(get_modules(ip_to_id("10.10.22.66")))
+# Run the script and first check if an IP Address was passed on the command line
+if len(sys.argv) > 1:
+    print_info(get_modules(ip_to_id(passed_IP[1])))
+else:
+    print("Please specify IP address of device")
 

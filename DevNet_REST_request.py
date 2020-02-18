@@ -16,7 +16,7 @@ if rg.status_code == 200:
     # Print the response headers
     print(rg.headers)
 else:
-    print("Error " + rg.status_code)
+    print("Error " + str(rg.status_code))
 
 
 # Create a POST request object "rp" with URI, headers and body payload data

@@ -5,7 +5,7 @@ from ncclient import manager
 
 def netconf():
     # {'host': 'ios-xe-mgmt.cisco.com', 'username': 'developer', 'password': 'C1sco12345',
-    # 'netconf_port': 10000, 'restconf_port': 9443, 'ssh_port': 8181}
+    #'netconf_port': 10000, 'restconf_port': 9443, 'ssh_port': 8181}
     m = manager.connect(
          host='ios-xe-mgmt.cisco.com',
          port='10000',

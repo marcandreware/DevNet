@@ -63,6 +63,7 @@ def print_info(modules):
                                                            partNumber=module['partNumber'],
                                                            moduleType=module['isFieldReplaceable']))
 
+
 # Run the script and first check if an IP Address was passed on the command line
 if len(sys.argv) > 1:
     print_info(get_modules(ip_to_id(passed_IP[1])))

@@ -8,7 +8,7 @@ requests.packages.urllib3.disable_warnings()
 
 endpoint = "https://api.ciscospark.com/v1"
 resource = "/messages"
-access_token = "{yourtoken}"
+access_token = "{yourToken}}"
 headers = {
     "content-type": "application/json",
     "authorization": "Bearer " + access_token

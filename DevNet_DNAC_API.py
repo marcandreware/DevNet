@@ -19,10 +19,10 @@ def get_auth_token(controller_ip=DNAC, username=DNAC_USER, password=DNAC_PASSWOR
     result.raise_for_status()
 
     token = result.json()["Token"]
+
     return {
         "controller_ip": controller_ip, "token": token
     }
-
 
 def create_url(path, controller_ip=DNAC):
     """ Helper function to create a DNAC API endpoint URL
@@ -64,3 +64,4 @@ if __name__ == "__main__":
                      device['platformId'],
                      device['softwareVersion'],
                      device['role'], uptime))
+
